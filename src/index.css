@@ -1,13 +1,329 @@
-body {
+/* Global Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
+
+/* Basic Info Container */
+.basic-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #3498db;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+/* Info Box Styling */
+.info-box {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.info-box p {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .basic-info-container {
+    padding: 30px 15px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+}
+
+/* Skills Page Styling */
+.skills-page .skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.skills-page .skills-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.skills-page .skills-container .profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px 0;
+  object-fit: cover;
+  border: 4px solid #3498db; /* Adding a border to the image */
+}
+
+.skills-page .skills-content {
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+.skills-page .skills-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.skills-page .skills-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-page .skills-content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #555;
+}
+
+.skills-page .skills-content ul li strong {
+  color: #3498db; /* Highlighting skills category names */
+}
+
+.skills-page .skills-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.skills-page .skills-container a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skills-page .skills-container a:hover {
+  text-decoration: underline;
+}
+
+.skills-page .example-projects {
+  margin-top: 30px;
+}
+
+.skills-page .example-projects ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.skills-page .example-projects ul li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.skills-page .example-projects ul li strong {
+  color: #3498db;
+}
+
+
+/* Work Page Styling */
+.work-container {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.work-container h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.work-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.work-container li {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.work-container li:hover {
+  transform: translateY(-5px);
+}
+
+.work-container h3 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.work-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.work-container img {
+  width: 100%;
+  max-width: 800px; 
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.work-container a {
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.work-container a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .work-container h2 {
+    font-size: 2rem;
+  }
+
+  .work-container li {
+    padding: 15px;
+  }
+
+  .work-container img {
+    width: 100%;
+    max-width: 250px; 
+  }
+}
+
+/* Resources Page Styling */
+.resources-container {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+}
+
+.resources-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+.resource-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates responsive columns */
+  gap: 30px;
+  justify-items: center;
+}
+
+.resource-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.resource-box a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.resource-box a:hover {
+  text-decoration: underline;
+}
+
+.resource-box p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.resource-box:hover {
+  transform: translateY(-5px); /* Adds a subtle hover effect */
+}
+
+@media (max-width: 768px) {
+  .resource-list {
+    grid-template-columns: 1fr; /* Stacks the resources on smaller screens */
+  }
+}
+
