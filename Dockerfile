@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Copy the build folder from the previous step to the Nginx container
 COPY --from=build /portfolio-site/build /usr/share/nginx/html
 
-# Expose port 5575 (the port the container will use)
-EXPOSE 5575
+# Expose port 80, as NGINX serves on port 80 internally
+EXPOSE 80
 
 # Start Nginx in the foreground to serve the app
 CMD ["nginx", "-g", "daemon off;"]
