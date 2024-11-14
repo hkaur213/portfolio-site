@@ -1,4 +1,5 @@
 import React from 'react';
+import '../index.css';
 
 const DeveloperSetup = () => {
   return (
@@ -47,4 +48,4 @@ const DeveloperSetup = () => {
   );
 };
 
-export default DeveloperSetup;
+export default DeveloperSetup;

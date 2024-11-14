@@ -2,7 +2,7 @@
 FROM node:16-alpine AS build
 
 # Set the working directory inside the container
-WORKDIR /portfolio-site
+WORKDIR /kaur_harleen_final_site
 
 # Copy package.json and package-lock.json (if present)
 COPY package.json package-lock.json ./
@@ -20,10 +20,10 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the build folder from the previous step to the Nginx container
-COPY --from=build /portfolio-site/build /usr/share/nginx/html
+COPY --from=build /kaur_harleen_final_site/build /usr/share/nginx/html
 
-# Expose port 80, as NGINX serves on port 80 internally
-EXPOSE 80
+# Expose port 5575
+EXPOSE 5575
 
-# Start Nginx in the foreground to serve the app
+# Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
